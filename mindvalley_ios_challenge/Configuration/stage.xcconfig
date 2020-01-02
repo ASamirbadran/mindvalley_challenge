@@ -1,0 +1,11 @@
+//
+//  stage.xcconfig
+//  mindvalley_ios_challenge
+//
+//  Created by Ahmed Samir on 1/2/20.
+//  Copyright © 2020 Tania. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BASE_URL = www.pastebin.com
