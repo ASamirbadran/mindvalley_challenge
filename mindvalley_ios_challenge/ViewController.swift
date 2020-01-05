@@ -13,9 +13,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        NetworkManager.shared?.getBoardData(completion: { (result: Result<[Board], NetworkError>) in
+            switch result {
+            case .success(let homeProduct):
+               print(homeProduct)
+            case .failure(let error):
+                print(error)
+
+            }
+        })
+
 
     }
-
-
 }
 

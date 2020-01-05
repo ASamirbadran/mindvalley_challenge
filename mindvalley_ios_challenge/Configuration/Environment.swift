@@ -29,7 +29,7 @@ public enum Environment {
         guard let rootURLstring = Environment.infoDictionary[Keys.Plist.rootURL] as? String else {
             fatalError("Root URL not set in plist for this environment")
         }
-        let baseUrl = "https://\(rootURLstring)"
+        let baseUrl = "http://\(rootURLstring)"
         guard let url = URL(string: baseUrl ) else {
             fatalError("Root URL is invalid")
         }
