@@ -11,8 +11,7 @@ let defaultSession = URLSession(configuration: .default)
 
 open class Downloader {
     static var shared: Downloader = Downloader()
-    func fetchData(url : URL,
-                   dataType: DataType,
+    func fetchData(url : URL,                   dataType: DataType,
                    completion: @escaping (
         _ result: Swift.Result<Data, Error>,
         _ urlResponse: URLResponse?)

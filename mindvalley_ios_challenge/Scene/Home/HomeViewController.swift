@@ -89,7 +89,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let row = indexPath.row
         if let boardCellData = presenter?.boardList[row] {
-            cell.confiureCell(boardCell: boardCellData)
+            cell.configureCell(boardCell: boardCellData)
         }
         return cell
     }
