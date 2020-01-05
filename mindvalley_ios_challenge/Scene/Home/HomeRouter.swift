@@ -32,7 +32,9 @@ class HomeRouter {
 }
 
 extension HomeRouter: HomeWireframeProtocol {
-    func viewItemDetails(ofIndex: Int) {
+    func NavigateToItemDetails(ofIndex: Int) {
         
     }
+    
+
 }

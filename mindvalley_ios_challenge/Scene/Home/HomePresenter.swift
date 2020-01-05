@@ -13,6 +13,7 @@ class HomePresenter: NSObject {
     private weak var view: HomeViewProtocol?
     internal var interactor: HomeInteractorInputProtocol?
     private var router: HomeWireframeProtocol?
+    var boardItems = [Board]()
 
     init(interface: HomeViewProtocol,
          interactor: HomeInteractorInputProtocol?,
@@ -24,27 +25,33 @@ class HomePresenter: NSObject {
 
 }
 extension HomePresenter: HomePresenterProtocol {
-    func getBoardList() {
-        
-    }
-    
-    var boardList: Board {
-        
-    }
-    
     func viewItemDetails(ofIndex: Int) {
-        
+        router?.NavigateToItemDetails(ofIndex: ofIndex)
+    }
+    
+   
+    func getBoardList() {
+        view?.showLoadingIndicator?()
+        interactor?.fetchBoardList()
+    }
+    
+    var boardList: [Board] {
+         return boardItems
     }
     
 
 }
 extension HomePresenter: HomeInteractorOutputProtocol {
-    func boardListFetchedSuccessfully(_ boards: Board) {
-        
+    func boardListFetchedSuccessfully(_ boards: [Board]) {
+        view?.hideLoadingIndicator?()
+        self.boardItems = boards
+        view?.reloadData()
     }
     
     func boardListFetchedUnSuccessfully(title: String, errorMessage: String) {
-        
+        view?.hideLoadingIndicator?()
+        //print or show error
+        print(errorMessage)
     }
     
 

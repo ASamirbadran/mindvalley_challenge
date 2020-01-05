@@ -21,6 +21,14 @@ class HomeInteractor {
 extension HomeInteractor: HomeInteractorInputProtocol {
     func fetchBoardList() {
         
+        NetworkManager.shared?.getBoardData(completion: { (result: Result<[Board], NetworkError>) in
+            switch result {
+            case .success(let homeBoard):
+                self.presenter?.boardListFetchedSuccessfully(homeBoard)
+            case .failure(let error):
+                self.presenter?.boardListFetchedUnSuccessfully(title: "error", errorMessage: error.message ?? "")
+            }
+        })
     }
     
 

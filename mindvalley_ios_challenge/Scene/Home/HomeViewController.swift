@@ -31,6 +31,9 @@ extension HomeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad?()
+        setupTableView()
+        presenter?.getBoardList()
+
     }
 }
 
@@ -46,12 +49,53 @@ extension HomeViewController {
 
 // MARK: - Private
 extension HomeViewController {
-
+    func setupTableView() {
+           boardTableView.delegate = self
+           boardTableView.dataSource = self
+           boardTableView.register(
+               UINib (nibName: BoardItemTableViewCell.className, bundle: Bundle(for: BoardItemTableViewCell.self)),
+               forCellReuseIdentifier: BoardItemTableViewCell.className)
+           
+           boardTableView.rowHeight = 130
+           boardTableView.separatorStyle = .none
+       }
 }
 
 // MARK: - Protocal
 extension HomeViewController: HomeViewProtocol {
     func reloadData() {
-        
+        boardTableView.reloadData()
+
     }
+}
+
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let count = presenter?.boardList.count ?? 0
+        return count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: BoardItemTableViewCell.className,
+            for: indexPath) as? BoardItemTableViewCell else {
+                fatalError("BoardItemTableViewCell")
+        }
+        let row = indexPath.row
+        if let boardCellData = presenter?.boardList[row] {
+            cell.confiureCell(boardCell: boardCellData)
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.viewItemDetails(ofIndex: indexPath.row)
+    }
+    
 }

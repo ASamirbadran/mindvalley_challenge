@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension AppDelegate {
     
@@ -15,4 +16,12 @@ extension AppDelegate {
         let defaults = NetworkDefaults(baseUrl: Environment.rootURL)
         NetworkManager.shared = NetworkManager(config: defaults)
     }
+    
+    
+    func openHomeScreen() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = Container.getHomeScreen()
+        self.window?.makeKeyAndVisible()
+    }
+
 }

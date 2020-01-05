@@ -16,7 +16,7 @@ protocol HomePresenterProtocol: BasePresenterProtocol {
 
     /* ViewController -> Presenter */
     func getBoardList()
-    var boardList: Board { get }
+    var boardList: [Board] { get }
     func viewItemDetails(ofIndex: Int)
 }
 
@@ -34,7 +34,7 @@ protocol HomeInteractorInputProtocol: class {
 protocol HomeInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
-    func boardListFetchedSuccessfully(_ boards: Board)
+    func boardListFetchedSuccessfully(_ boards: [Board])
     func boardListFetchedUnSuccessfully(title: String, errorMessage: String)
 }
 
@@ -52,5 +52,5 @@ protocol HomeViewProtocol: BaseViewProtocal {
 // MARK: - Router
 
 protocol HomeWireframeProtocol: class {
-    func viewItemDetails(ofIndex: Int)
+    func NavigateToItemDetails(ofIndex: Int)
 }
