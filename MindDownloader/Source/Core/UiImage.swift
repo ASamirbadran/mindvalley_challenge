@@ -9,7 +9,8 @@
 import UIKit
 public extension UIImageView {
     func loadImageFromUrl(url : URL) {
-        Downloader.shared.fetchData(url: url, dataType: .image, completion: { (result: Result<Data, Error>) in
+        self.image = UIImage(named: "placeholder")
+        Downloader.shared.fetchImage(url: url, completion: { (result: Result<Data, CustomError>) in
             switch result {
             case.success(let data):
                 let image = UIImage(data: data)
@@ -17,7 +18,7 @@ public extension UIImageView {
                     self.image = image
                 }
             case.failure( _):
-                self.image = UIImage(named: "placeholder")
+                debugPrint("Error Fetching Image With Url : \(url)")
             }
         })
     }

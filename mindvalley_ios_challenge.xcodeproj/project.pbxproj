@@ -44,6 +44,7 @@
 		111A5E8B23C216F6006958A8 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111A5E8923C216F6006958A8 /* Downloader.swift */; };
 		111A5E8C23C216F7006958A8 /* UiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111A5E8A23C216F6006958A8 /* UiImage.swift */; };
 		111A5E8E23C21896006958A8 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111A5E8D23C21896006958A8 /* DataType.swift */; };
+		11D841DB23C3410D00204427 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DA23C3410D00204427 /* CustomError.swift */; };
 		A2D48B3271B236BEDF2A4E80 /* Pods_mindvalley_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC551DFAF377FAACFCCB86F9 /* Pods_mindvalley_ios_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		111A5E8923C216F6006958A8 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		111A5E8A23C216F6006958A8 /* UiImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiImage.swift; sourceTree = "<group>"; };
 		111A5E8D23C21896006958A8 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		11D841DA23C3410D00204427 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		37C5A1BD6B305E5210DC3107 /* Pods-mindvalley_ios_challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindvalley_ios_challenge.release.xcconfig"; path = "Target Support Files/Pods-mindvalley_ios_challenge/Pods-mindvalley_ios_challenge.release.xcconfig"; sourceTree = "<group>"; };
 		440E470A17070CA4D9DCCAC7 /* Pods-mindvalley_ios_challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindvalley_ios_challenge.debug.xcconfig"; path = "Target Support Files/Pods-mindvalley_ios_challenge/Pods-mindvalley_ios_challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		53313A30CDFD9D26FD0F3BC7 /* Pods-mindvalley_ios_challenge.live.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindvalley_ios_challenge.live.xcconfig"; path = "Target Support Files/Pods-mindvalley_ios_challenge/Pods-mindvalley_ios_challenge.live.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				111A5E8923C216F6006958A8 /* Downloader.swift */,
 				111A5E8D23C21896006958A8 /* DataType.swift */,
 				111A5E8A23C216F6006958A8 /* UiImage.swift */,
+				11D841DA23C3410D00204427 /* CustomError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				111A5E8B23C216F6006958A8 /* Downloader.swift in Sources */,
+				11D841DB23C3410D00204427 /* CustomError.swift in Sources */,
 				111A5E8E23C21896006958A8 /* DataType.swift in Sources */,
 				111A5E8C23C216F7006958A8 /* UiImage.swift in Sources */,
 			);
