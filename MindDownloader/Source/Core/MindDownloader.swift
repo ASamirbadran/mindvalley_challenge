@@ -37,6 +37,12 @@ open class MindDownloader {
                           completion: @escaping (
         _ result: Swift.Result<Data, CustomError>)
         -> Void) -> URLSessionTask?{
+        
+        if let cachedJsonData = CacheManager.shared.getObject(forKey: endpoint.baseUrl as NSString) as Data? {
+                completion(.success(cachedJsonData))
+                return nil
+            }
+        
         do {
             let request = try self.buildRequest(endpoint: endpoint)
             
@@ -50,7 +56,10 @@ open class MindDownloader {
                     }
                     return
                 }
+                //caching Json
+                CacheManager.shared.setObject(data: data as NSData, forKey: endpoint.baseUrl as NSString)
                 completion(.success(data))
+
             }
             task.resume()
             

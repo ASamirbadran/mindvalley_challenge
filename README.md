@@ -1,4 +1,4 @@
-# Mindvalley_challenge
+# Mindvalley IOS Challenge
 Mindvalley IOS task for creating a library for Loading Images and JSON.
 
 The MindDownloader Library is Added As A Framework inside this sample Project which include a list of image like Pinterest  as a Demo.
@@ -6,10 +6,12 @@ This Demo is Made with VIPER Architecture and all image Loading , api call is Ma
 
 
 ## Usage
+```swift
+import MindDownloader
+```
 For Downloading Image:
 
 ```swift
-import MindDownloader
 self.imageView.loadImageFromUrl(url: link)
 ```
 For Downloading Json:

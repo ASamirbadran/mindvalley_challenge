@@ -14,6 +14,7 @@ class HomeViewController: BaseViewController {
     internal var presenter: HomePresenterProtocol?
 
     // MARK: - Private Variables
+    var refreshControl = UIRefreshControl()
 
     // MARK: - Computed Variables
 
@@ -44,7 +45,10 @@ extension HomeViewController {
 
 // MARK: - Selectors
 extension HomeViewController {
-
+    @objc
+    func refreshData() {
+        presenter?.getBoardList()
+    }
 }
 
 // MARK: - Private
@@ -58,6 +62,8 @@ extension HomeViewController {
            
            boardTableView.rowHeight = 130
            boardTableView.separatorStyle = .none
+           refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+           boardTableView.addSubview(refreshControl)
        }
 }
 
@@ -66,6 +72,8 @@ extension HomeViewController: HomeViewProtocol {
     func reloadData() {
         DispatchQueue.main.async {
             self.boardTableView.reloadData()
+            self.refreshControl.endRefreshing()
+
         }
 
     }
