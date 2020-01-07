@@ -42,6 +42,8 @@
 		111FF38523C491C200660480 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111FF37F23C491C200660480 /* Urls.swift */; };
 		111FF38723C4925B00660480 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 111FF38623C4925B00660480 /* README.md */; };
 		111FF38D23C4BAA900660480 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111FF38C23C4BAA900660480 /* CacheManager.swift */; };
+		117F77D523C4FEFD00F47232 /* MindDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F77D423C4FEFD00F47232 /* MindDownloaderTests.swift */; };
+		117F77D723C4FEFD00F47232 /* MindDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111A5E7923C216B7006958A8 /* MindDownloader.framework */; };
 		11D841DB23C3410D00204427 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DA23C3410D00204427 /* CustomError.swift */; };
 		11D841DE23C3655500204427 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DD23C3655500204427 /* ImageDownloader.swift */; };
 		11D841E023C3667E00204427 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DF23C3667E00204427 /* EndPoint.swift */; };
@@ -51,6 +53,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		111A5E7E23C216B8006958A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11146E7B23BE0B9E001B353C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 111A5E7823C216B7006958A8;
+			remoteInfo = MindDownloader;
+		};
+		117F77D823C4FEFD00F47232 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 11146E7B23BE0B9E001B353C /* Project object */;
 			proxyType = 1;
@@ -113,6 +122,9 @@
 		111FF37F23C491C200660480 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		111FF38623C4925B00660480 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		111FF38C23C4BAA900660480 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		117F77D223C4FEFD00F47232 /* MindDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		117F77D423C4FEFD00F47232 /* MindDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindDownloaderTests.swift; sourceTree = "<group>"; };
+		117F77D623C4FEFD00F47232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11D841DA23C3410D00204427 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		11D841DD23C3655500204427 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		11D841DF23C3667E00204427 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -141,6 +153,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		117F77CF23C4FEFD00F47232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117F77D723C4FEFD00F47232 /* MindDownloader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -150,6 +170,7 @@
 				111FF38623C4925B00660480 /* README.md */,
 				11146E8523BE0B9E001B353C /* mindvalley_ios_challenge */,
 				111A5E7A23C216B7006958A8 /* MindDownloader */,
+				117F77D323C4FEFD00F47232 /* MindDownloaderTests */,
 				11146E8423BE0B9E001B353C /* Products */,
 				21F6DCCD3FB45C9156D097E9 /* Pods */,
 				8F9926198504D490E655FCBA /* Frameworks */,
@@ -161,6 +182,7 @@
 			children = (
 				11146E8323BE0B9E001B353C /* mindvalley_ios_challenge.app */,
 				111A5E7923C216B7006958A8 /* MindDownloader.framework */,
+				117F77D223C4FEFD00F47232 /* MindDownloaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +369,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		117F77D323C4FEFD00F47232 /* MindDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				117F77D423C4FEFD00F47232 /* MindDownloaderTests.swift */,
+				117F77D623C4FEFD00F47232 /* Info.plist */,
+			);
+			path = MindDownloaderTests;
+			sourceTree = "<group>";
+		};
 		11D841EA23C382E200204427 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +457,24 @@
 			productReference = 111A5E7923C216B7006958A8 /* MindDownloader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		117F77D123C4FEFD00F47232 /* MindDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117F77DE23C4FEFD00F47232 /* Build configuration list for PBXNativeTarget "MindDownloaderTests" */;
+			buildPhases = (
+				117F77CE23C4FEFD00F47232 /* Sources */,
+				117F77CF23C4FEFD00F47232 /* Frameworks */,
+				117F77D023C4FEFD00F47232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117F77D923C4FEFD00F47232 /* PBXTargetDependency */,
+			);
+			name = MindDownloaderTests;
+			productName = MindDownloaderTests;
+			productReference = 117F77D223C4FEFD00F47232 /* MindDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -440,6 +489,9 @@
 						CreatedOnToolsVersion = 11.3;
 					};
 					111A5E7823C216B7006958A8 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					117F77D123C4FEFD00F47232 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -459,6 +511,7 @@
 			targets = (
 				11146E8223BE0B9E001B353C /* mindvalley_ios_challenge */,
 				111A5E7823C216B7006958A8 /* MindDownloader */,
+				117F77D123C4FEFD00F47232 /* MindDownloaderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -478,6 +531,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		111A5E7723C216B7006958A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117F77D023C4FEFD00F47232 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -556,6 +616,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		117F77CE23C4FEFD00F47232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117F77D523C4FEFD00F47232 /* MindDownloaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -563,6 +631,11 @@
 			isa = PBXTargetDependency;
 			target = 111A5E7823C216B7006958A8 /* MindDownloader */;
 			targetProxy = 111A5E7E23C216B8006958A8 /* PBXContainerItemProxy */;
+		};
+		117F77D923C4FEFD00F47232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 111A5E7823C216B7006958A8 /* MindDownloader */;
+			targetProxy = 117F77D823C4FEFD00F47232 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1008,6 +1081,82 @@
 			};
 			name = live;
 		};
+		117F77DA23C4FEFD00F47232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAQT653Y7U;
+				INFOPLIST_FILE = MindDownloaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mindvalley.MindDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		117F77DB23C4FEFD00F47232 /* stage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAQT653Y7U;
+				INFOPLIST_FILE = MindDownloaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mindvalley.MindDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = stage;
+		};
+		117F77DC23C4FEFD00F47232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAQT653Y7U;
+				INFOPLIST_FILE = MindDownloaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mindvalley.MindDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		117F77DD23C4FEFD00F47232 /* live */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAQT653Y7U;
+				INFOPLIST_FILE = MindDownloaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mindvalley.MindDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = live;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1040,6 +1189,17 @@
 				111A5E8423C216B8006958A8 /* stage */,
 				111A5E8523C216B8006958A8 /* Release */,
 				111A5E8623C216B8006958A8 /* live */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117F77DE23C4FEFD00F47232 /* Build configuration list for PBXNativeTarget "MindDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117F77DA23C4FEFD00F47232 /* Debug */,
+				117F77DB23C4FEFD00F47232 /* stage */,
+				117F77DC23C4FEFD00F47232 /* Release */,
+				117F77DD23C4FEFD00F47232 /* live */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
