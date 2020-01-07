@@ -8,14 +8,12 @@
 
 import MindDownloader
 class BoardServiceApiCall {
-
+    
     func getBoardData(completion: @escaping (
         _ result: Swift.Result<[Board], Error>
         ) -> Void) {
-
-        let prov = JsonDownloader.shared
-    
-        prov.request(endpoint: BoardService.readBoardData){ result in
+        
+        MindDownloader.shared.fetchData(endpoint: BoardService.readBoardData){ result in
             switch result{
             case .success(let data):
                 do {
@@ -29,6 +27,6 @@ class BoardServiceApiCall {
                 completion(.failure(CustomError.urlParse))
             }
         }
-
+        
     }
 }

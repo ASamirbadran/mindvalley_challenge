@@ -41,7 +41,6 @@
 		111FF38423C491C200660480 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111FF37E23C491C200660480 /* ProfileImage.swift */; };
 		111FF38523C491C200660480 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111FF37F23C491C200660480 /* Urls.swift */; };
 		111FF38723C4925B00660480 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 111FF38623C4925B00660480 /* README.md */; };
-		111FF38923C4A0FB00660480 /* JsonDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111FF38823C4A0FB00660480 /* JsonDownloader.swift */; };
 		11D841DB23C3410D00204427 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DA23C3410D00204427 /* CustomError.swift */; };
 		11D841DE23C3655500204427 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DD23C3655500204427 /* ImageDownloader.swift */; };
 		11D841E023C3667E00204427 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D841DF23C3667E00204427 /* EndPoint.swift */; };
@@ -112,7 +111,6 @@
 		111FF37E23C491C200660480 /* ProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		111FF37F23C491C200660480 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		111FF38623C4925B00660480 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		111FF38823C4A0FB00660480 /* JsonDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloader.swift; sourceTree = "<group>"; };
 		11D841DA23C3410D00204427 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		11D841DD23C3655500204427 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		11D841DF23C3667E00204427 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 				11D841DA23C3410D00204427 /* CustomError.swift */,
 				11D841DD23C3655500204427 /* ImageDownloader.swift */,
 				11D841DF23C3667E00204427 /* EndPoint.swift */,
-				111FF38823C4A0FB00660480 /* JsonDownloader.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -548,7 +545,6 @@
 			files = (
 				11D841E023C3667E00204427 /* EndPoint.swift in Sources */,
 				111A5E8B23C216F6006958A8 /* MindDownloader.swift in Sources */,
-				111FF38923C4A0FB00660480 /* JsonDownloader.swift in Sources */,
 				11D841DE23C3655500204427 /* ImageDownloader.swift in Sources */,
 				11D841DB23C3410D00204427 /* CustomError.swift in Sources */,
 				111A5E8E23C21896006958A8 /* DataType.swift in Sources */,
