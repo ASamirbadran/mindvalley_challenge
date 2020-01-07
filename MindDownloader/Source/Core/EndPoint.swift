@@ -30,14 +30,11 @@ public struct JSONEncoding: Encoding {
     
     public static let `default` = JSONEncoding()
     
-    
     public func encode(_ requet: URLRequest ,with paramters:[String:Any])throws -> URLRequest {
         var newRequest = requet
         let data = try JSONSerialization.data(withJSONObject: paramters, options: [])
         newRequest.httpBody = data
-        
         return newRequest
-        
     }
     
     

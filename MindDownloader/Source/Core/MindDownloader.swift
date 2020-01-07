@@ -11,7 +11,7 @@ let defaultSession = URLSession(configuration: .default)
 
 open class MindDownloader {
     public static var shared: MindDownloader = MindDownloader()
-    
+    // for fetching data for image .
     func fetchData(url : URL,
                    completion: @escaping (
         _ result: Swift.Result<Data, CustomError>)
@@ -65,6 +65,7 @@ open class MindDownloader {
     }
     
     
+    //building url from endpoing request for loading json
     internal func buildRequest(endpoint:EndPoint) throws -> URLRequest {
         
         let stringPath = endpoint.baseUrl
@@ -93,5 +94,9 @@ open class MindDownloader {
             guard let session = sessions.first(where: {$0.currentRequest?.url == url}) else { return }
             session.cancel()
         }
+    }
+    
+    open func setCacheLimit(totalCostLimit:Int, countLimit:Int) {
+        CacheManager.shared.setCacheLimit(totalCostLimit: totalCostLimit, countLimit: countLimit)
     }
 }
