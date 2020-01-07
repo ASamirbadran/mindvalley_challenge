@@ -10,7 +10,7 @@ import UIKit
 public extension UIImageView {
     func loadImageFromUrl(url : URL) {
         self.image = UIImage(named: "placeholder")
-        Downloader.shared.fetchImage(url: url, completion: { (result: Result<Data, CustomError>) in
+        ImageDownloader.shared.fetchImage(url: url, completion: { (result: Result<Data, CustomError>) in
             switch result {
             case.success(let data):
                 let image = UIImage(data: data)

@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:mindvalley_ios_challenge/../Model"
-      name = "Model">
-      <FileRef
-         location = "group:Model/Board.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Model/Categories.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Model/Links.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Model/ProfileImage.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Model/Urls.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Model/User.swift">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:mindvalley_ios_challenge.xcodeproj">
    </FileRef>

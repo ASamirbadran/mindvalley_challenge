@@ -6,6 +6,5 @@ target 'mindvalley_ios_challenge' do
   use_frameworks!
 
   # Pods for mindvalley_ios_challenge
-    pod 'Moya'
 
 end

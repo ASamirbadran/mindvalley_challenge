@@ -7,15 +7,18 @@
 //
 
 import Foundation
-enum CustomError: Error, LocalizedError {
+public enum CustomError: Error, LocalizedError {
     case underlying(error: Error)
     case failure
-    var errorDescription: String? {
+    case urlParse
+    public var errorDescription: String? {
         switch self {
         case .failure:
             return "Failed To Parse Error"
         case . underlying(let error):
             return error.localizedDescription
+        case .urlParse:
+            return "Failed to parse string to url"
         }
     }
 }

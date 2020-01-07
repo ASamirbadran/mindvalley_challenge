@@ -38,10 +38,10 @@ class BaseViewController: UIViewController {
 extension BaseViewController: ViewIndicatorProtocal {
 
     func showLoadingIndicator() {
-
+        Loader.show(onView: view)
     }
 
     func hideLoadingIndicator() {
-
+        Loader.hide()
     }
 }

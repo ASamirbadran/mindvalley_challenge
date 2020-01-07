@@ -64,7 +64,9 @@ extension HomeViewController {
 // MARK: - Protocal
 extension HomeViewController: HomeViewProtocol {
     func reloadData() {
-        boardTableView.reloadData()
+        DispatchQueue.main.async {
+            self.boardTableView.reloadData()
+        }
 
     }
 }
