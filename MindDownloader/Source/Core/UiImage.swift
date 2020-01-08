@@ -8,6 +8,7 @@
 
 import UIKit
 public extension UIImageView {
+    //need to add same function which accept ursl as as string and send to the library
     func loadImageFromUrl(url : URL) {
         self.image = UIImage(named: "placeholder")
         ImageDownloader.shared.fetchImage(url: url, completion: { (result: Result<Data, CustomError>) in

@@ -7,12 +7,12 @@
 //
 
 import UIKit
-let defaultSession = URLSession(configuration: .default)
 
 open class MindDownloader {
+    private let defaultSession = URLSession(configuration: .default)
     public static var shared: MindDownloader = MindDownloader()
     // for fetching data for image .
-    func fetchData(url : URL,
+    public func fetchData(url : URL,
                    completion: @escaping (
         _ result: Swift.Result<Data, CustomError>)
         -> Void) {
