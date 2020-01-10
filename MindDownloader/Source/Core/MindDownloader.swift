@@ -111,6 +111,7 @@ open class MindDownloader {
     
     func getSession() -> URLSession {
         let config = URLSessionConfiguration.default
+        //assuming same response regarding same Url
         config.requestCachePolicy = .returnCacheDataElseLoad
         let session = URLSession(configuration: config)
         return session

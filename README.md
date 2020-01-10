@@ -37,8 +37,8 @@ MindDownloader.shared.setCacheLimit(totalCostLimit: 10, countLimit: 10)
 ```
 
 ## TODO
- 1- Adding feature for handling loading the same image at the same time from diffrent application part by requesting it one time only.
+ * Adding feature for handling loading the same image at the same time from diffrent application part by requesting it one time only.
  
- 2- Adding encoding paramters as the encode type and attach to the request as currently we support Json Encoding only.
+ * Adding encoding paramters as the encode type and attach to the request as currently we support Json Encoding only.
  
- 3- Supporting XML , PDF.
+* Supporting XML , PDF.

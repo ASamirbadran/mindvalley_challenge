@@ -52,7 +52,7 @@ class MindDownloaderTests: XCTestCase {
         XCTAssertTrue(isSuccess ?? false , "result should be a success case")
     }
     
-    func testThatMidDownloaderCanFetchInCorrectImage() {
+    func testThatMidDownloaderCantFetchInCorrectImage() {
         let midDownloader = MindDownloader.shared
         let url = URL(string: "crop&h=128&w=128&s=622a88097cf6661f84cd8942d851d9a2")
         let expectation = self.expectation(description: "image download should fail")
