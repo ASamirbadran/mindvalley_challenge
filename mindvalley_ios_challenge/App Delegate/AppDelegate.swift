@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         openHomeScreen()
-        //setting Cach Limnit
-        MindDownloader.shared.setCacheLimit(totalCostLimit: 10, countLimit: 10)
+        //setting Cach Limnit to 60 Mb
+        let cacheLimit = 60000000
+        MindDownloader.shared.setCacheLimit(totalCostLimit: cacheLimit, countLimit: 100)
         return true
     }
 

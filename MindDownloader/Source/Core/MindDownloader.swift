@@ -9,14 +9,14 @@
 import UIKit
 
 open class MindDownloader {
-    private let defaultSession = URLSession(configuration: .default)
     public static var shared: MindDownloader = MindDownloader()
+    
     // for fetching data for image .
     public func fetchData(url : URL,
-                   completion: @escaping (
+                          completion: @escaping (
         _ result: Swift.Result<Data, CustomError>)
         -> Void) {
-        
+        let defaultSession = getSession()
         defaultSession.dataTask(with: URLRequest(url: url)) { data, response, error in
             guard let data = data else {
                 if let error = error {
@@ -39,13 +39,13 @@ open class MindDownloader {
         -> Void) -> URLSessionTask?{
         
         if let cachedJsonData = CacheManager.shared.getObject(forKey: endpoint.baseUrl as NSString) as Data? {
-                completion(.success(cachedJsonData))
-                return nil
-            }
+            completion(.success(cachedJsonData))
+            return nil
+        }
         
         do {
             let request = try self.buildRequest(endpoint: endpoint)
-            
+            let defaultSession = getSession()
             let task = defaultSession.dataTask(with: request) { data, response, error in
                 guard let data = data else {
                     if let error = error {
@@ -59,7 +59,7 @@ open class MindDownloader {
                 //caching Json
                 CacheManager.shared.setObject(data: data as NSData, forKey: endpoint.baseUrl as NSString)
                 completion(.success(data))
-
+                
             }
             task.resume()
             
@@ -107,5 +107,12 @@ open class MindDownloader {
     
     open func setCacheLimit(totalCostLimit:Int, countLimit:Int) {
         CacheManager.shared.setCacheLimit(totalCostLimit: totalCostLimit, countLimit: countLimit)
+    }
+    
+    func getSession() -> URLSession {
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .returnCacheDataElseLoad
+        let session = URLSession(configuration: config)
+        return session
     }
 }

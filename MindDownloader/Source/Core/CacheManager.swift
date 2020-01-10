@@ -7,10 +7,9 @@
 //
 
 import UIKit
-let dataCache = NSCache<NSString, NSData>()
 
 open class CacheManager {
-    
+    let dataCache = NSCache<NSString, NSData>()
     public static var shared: CacheManager = CacheManager()
     
     func setCacheLimit(totalCostLimit:Int, countLimit:Int) {

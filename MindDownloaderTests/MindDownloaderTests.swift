@@ -61,7 +61,7 @@ class MindDownloaderTests: XCTestCase {
         var isSuccess: Bool?
         midDownloader.fetchData(url: url!) { res  in
             switch res {
-            case .success(let _):
+            case .success( _):
                 isSuccess = true
             case.failure(let error):
                 isSuccess = false
